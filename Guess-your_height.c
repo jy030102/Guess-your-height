@@ -1,39 +1,58 @@
 #include <stdio.h>
 #define jy_height 180
+#define jh_height 178
 
 int main()
 {
 
-    int guess_jy;
+    int guess;
+    int num;
  
-        printf("======리스트======\n1. 김정연\n");
+    printf("======리스트======\n1. 김정연\n");
+    printf("n2. 이지항\n");
+    
+    printf("번호를 선택하세요 :");
+    scanf("%d", &num);
 
-    while (1) {
+    if (num == 1)
+    {
+        while (1) {
+            printf("정연이의 키는?: ");
+            scanf("%d", &guess);
 
+            if (guess < jy_height) {
+                printf("업\n");
+            }
 
-        printf("정연이의 키는?: ");
-        scanf("%d", &guess_jy);
+            else if (guess == jy_height) {
+                printf("정답!\n");
+                break;
+            }
 
-        if (guess_jy < jy_height) {
-            printf("업\n");
-          
+            else if (guess > jy_height) {
+                printf("다운\n");
+            }
         }
-
-        else if (guess_jy == jy_height) {
-            printf("정답!\n");
-        
-            break;
-        }
-
-        else if (guess_jy > jy_height) {
-            printf("다운\n");
-
-          
-        }
-
     }
+    else if (num == 2)
+    {
+        while (1) {
+            printf("지항이의 키는?: ");
+            scanf("%d", &guess);
 
+            if (guess < jh_height) {
+                printf("업\n");
+            }
 
+            else if (guess == jh_height) {
+                printf("정답!\n");
+                break;
+            }
 
-    return;
+            else if (guess > jh_height) {
+                printf("다운\n");
+            }
+        }
+     }
+    return 0;
 }
