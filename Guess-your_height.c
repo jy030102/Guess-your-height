@@ -58,7 +58,6 @@ int main()
 
         }
     }
-    }
     else if (num == 3)
     {
         while (1) {
